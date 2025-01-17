@@ -7,6 +7,7 @@ import {updateVerifyToken} from "@/app/store/auth";
 import GuestPanelLayout from "@/app/components/guestPanelLayout";
 import Cookies from "universal-cookie";
 import Hr from "@/app/components/shared/hr";
+import Link from "next/link";
 
 const Login: NextPageWithLayout = () => {
     const dispatch = useAppDispatch();
@@ -38,8 +39,13 @@ const Login: NextPageWithLayout = () => {
                             </h1>
                             <Hr my={true}/>
                             <LoginForm setToken={setVerifyToken}/>
-                            <div>
-                                
+                            <div className="flex justify-between items-center text-sm">
+                                <p>
+                                    Do not have an account yet ?
+                                </p>
+                                <Link href="/auth/register" className="text-blue-500 font-bold hover:underline">
+                                    Register Now
+                                </Link>
                             </div>
                         </div>
                     </div>

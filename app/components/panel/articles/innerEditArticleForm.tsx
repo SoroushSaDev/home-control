@@ -10,7 +10,6 @@ import Cookies from "universal-cookie";
 import {CheckCircleIcon} from "@heroicons/react/24/solid";
 import Textarea from "../../shared/form/textarea";
 import Checkbox from "../../shared/form/checkbox";
-import TextEditor from "@/app/components/shared/form/textEditor";
 
 const InnerEditArticleForm = (props: FormikProps<ArticleFormValuesInterface>) => {
     const cookie = new Cookies;
@@ -73,7 +72,7 @@ const InnerEditArticleForm = (props: FormikProps<ArticleFormValuesInterface>) =>
                                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Content
                         </label>
-                        <Field id="content" name="content" as="textarea" rows={4} component={TextEditor}
+                        <Field id="content" name="content" as="textarea" rows={4}
                                className="bg-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"/>
                         <ErrorMessage name="content" component="div"
                                       className="mt-2 p-1 text-center rounded-md opacity-75 bg-red-500 text-gray-100 dark:text-gray-900 text-sm"/>
